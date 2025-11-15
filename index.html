@@ -209,16 +209,12 @@
     </div>
     
     <div class="success-page" id="success-page">
-        <!-- Cute Bear Love GIF -->
+        <!-- Kitty GIF for Yes response -->
         <div class="gif-container">
-            <iframe src="https://gifdb.com/gif/cute-brown-bear-i-love-you-wjg3bpkzqbmprhbt.html?embed=true" 
-                    width="200" 
-                    height="200" 
-                    frameBorder="0" 
-                    class="giphy-embed" 
-                    allowFullScreen
-                    style="border-radius: 15px;">
-            </iframe>
+            <div class="tenor-gif-embed" data-postid="15661193738971244766" data-share-method="host" data-aspect-ratio="1.00917" data-width="100%">
+                <a href="https://tenor.com/view/kitty-gif-15661193738971244766">Kitty Sticker</a>from 
+                <a href="https://tenor.com/search/kitty-stickers">Kitty Stickers</a>
+            </div>
         </div>
         
         <h1>Yaayyyyy!</h1>
@@ -302,6 +298,9 @@
                 
                 // Create confetti
                 createConfetti();
+                
+                // Load Tenor script for the success page GIF
+                loadTenorScript();
             });
             
             // Create confetti animation
@@ -326,13 +325,21 @@
                     }, 5000);
                 }
             }
+            
+            // Function to load Tenor script
+            function loadTenorScript() {
+                // Check if script is already loaded
+                if (!document.querySelector('script[src="https://tenor.com/embed.js"]')) {
+                    var tenorEmbedScript = document.createElement('script');
+                    tenorEmbedScript.src = 'https://tenor.com/embed.js';
+                    tenorEmbedScript.async = true;
+                    document.head.appendChild(tenorEmbedScript);
+                }
+            }
+            
+            // Load Tenor embed script initially
+            loadTenorScript();
         });
-
-        // Load Tenor embed script
-        var tenorEmbedScript = document.createElement('script');
-        tenorEmbedScript.src = 'https://tenor.com/embed.js';
-        tenorEmbedScript.async = true;
-        document.head.appendChild(tenorEmbedScript);
     </script>
 </body>
 </html>
