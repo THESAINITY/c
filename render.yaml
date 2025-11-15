@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: love-confession
+    env: static
+    buildCommand: ""
+    startCommand: "npx serve -s ."
+    publish: .
