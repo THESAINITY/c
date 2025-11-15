@@ -1,0 +1,15 @@
+{
+  "name": "love-confession",
+  "version": "1.0.0",
+  "description": "A beautiful love confession website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s ."
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "keywords": ["love", "confession", "romantic"],
+  "author": "Your Name",
+  "license": "MIT"
+}
